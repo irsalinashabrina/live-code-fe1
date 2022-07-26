@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  background-image: url(/home/user/react-app/src/images/bg.webp);
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
