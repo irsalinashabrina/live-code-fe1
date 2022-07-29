@@ -1,16 +1,51 @@
 import logo from './logo.svg';
 import './App.css';
-import BodyComponent from './component/BodyComponent';
 import LoginComponentFunc from './component/LoginComponentFunc';
 
-function App() {
+import 'bootstrap/dist/css/bootstrap.min.css';
+import LoginComponent from './component/LoginComponent';
+import Dulu from './component/dulu';
+import LoginBaru from './component/LoginBaru';
+import { Component } from 'react';
+import Dashboard from './component/Home';
+import Home from './component/Home';
 
 
-  return (
-    <>
-    <LoginComponentFunc/>
-    </>
-  );
-}
-
-export default App;
+class App extends Component{
+  constructor(props){
+    
+    super(props)
+    this.state = {
+     logged : false
+    }
+  }
+  
+  login = (params) => {
+    if(params.email === "admin@example.com" && params.password === "12345678"){
+    this.setState({
+      logged: true
+    })
+  }else{
+    alert("Incorrect email or password")
+  }
+  }
+  
+  logout = () => {
+    this.setState({
+      logged : false
+    })
+  }
+  
+  
+  render(){
+  
+    return(
+      <div>
+        {this.state.logged ? <Dashboard callback={this.logout}/> : <LoginBaru callback={this.login}/>}
+      </div>
+    );
+  }
+  
+  }
+  
+  export default App;
