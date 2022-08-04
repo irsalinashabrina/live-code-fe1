@@ -64,7 +64,7 @@ class Dashboard extends Component{
                                   <a className="nav-link active" aria-current="page" onClick={() => this.handleNavbar('')}>Home</a>
                              </li>
                              <li className="nav-item">
-                             <button  type="button" className="btn btn-primary" onClick={() => this.props.changePage("home")}>Home Asal</button>
+                                <button  type="button" className="btn btn-primary" onClick={() => this.props.changePage("home")}>Home Asal</button>
                                 <button  type="button" className="btn btn-primary" onClick={() => this.props.changePage("home-menu-baru")}>Home Menu Baru</button>
                                  {/* <a className="nav-link" onClick={() => this.handleNavbar('menus')}>Menus</a> */}
                              </li>
@@ -78,7 +78,7 @@ class Dashboard extends Component{
             </NavbarBS>
             </div>
 
-            <h1>Home Asal</h1>
+            <h1>Home Menu Baru</h1>
 
              {/* {viewPage} */}
          </>

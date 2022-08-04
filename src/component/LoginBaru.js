@@ -16,6 +16,7 @@ class LoginBaru extends Component {
     }
 
     handleEmailChange = (event) => {
+        console.log("event: ", event);
         if (event.target.value.includes('@')&&event.target.value.includes('.')){
             this.setState({
                 email : event.target.value,
@@ -31,11 +32,12 @@ class LoginBaru extends Component {
     }
 
     handlePasswordChange = (event) => {
+        console.log("event: ", event);
         if (event.target.value.length >= 6){
             this.setState({
                 password : event.target.value,
                 passwordValid : true,
-                passwordErrorMsg : ''
+                passwordErrorMsg : '',
             })
         } else {
             this.setState({
@@ -48,7 +50,7 @@ class LoginBaru extends Component {
     handleSubmit = (event) => {
         this.props.callback(this.state);
         event.preventDefault()
-      };
+    };
       
 
     render(){
